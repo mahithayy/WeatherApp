@@ -11,6 +11,7 @@ function App() {
     setLoading(true);
     setWeatherData(null);
     try {
+      await new Promise((resolve) => setTimeout(resolve, 500));
       const res = await fetch(
         `https://api.weatherapi.com/v1/current.json?key=cc1ae953a04c4ca6abb142957253010&q=${city}`
       );
